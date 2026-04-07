@@ -1,0 +1,29 @@
+package com.paulocesar.taskmanager.config;
+
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
+import io.swagger.v3.oas.annotations.info.Contact;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.security.SecurityScheme;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@OpenAPIDefinition(
+        info = @Info(
+                title = "Task Manager API",
+                version = "1.0.0",
+                description = "API REST para gerenciamento de tarefas com autenticação JWT e controle de acesso por perfil (ADMIN/USER).",
+                contact = @Contact(
+                        name = "Paulo Cesar Silva",
+                        email = "pcesarsilva88@gmail.com",
+                        url = "https://github.com/paulocesarsilva"
+                )
+        )
+)
+@SecurityScheme(
+        name = "bearerAuth",
+        type = SecuritySchemeType.HTTP,
+        scheme = "bearer",
+        bearerFormat = "JWT"
+)
+public class OpenApiConfig {}

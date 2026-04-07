@@ -1,0 +1,29 @@
+# Maven
+target/
+*.class
+*.jar
+*.war
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.swp
+*.swo
+
+# Secrets
+.env
+*.env.local
+application-prod.yml
+application-prod.yaml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Maven wrapper (manter o script, ignorar o jar)
+.mvn/wrapper/maven-wrapper.jar
